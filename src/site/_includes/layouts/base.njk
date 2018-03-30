@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body class="{{ bodyClass }}" >
+    <div class="container">
+      <header>
+        <ul class="nav">
+          <li>
+            <a href="/">home<small>where the heart is</small></a>
+          </li>
+          <li>
+            <a href="/about">about<small>all about this</small></a>
+          </li>
+        </ul>
+      </header>
+      {{ content | safe }}
+      {% include "footer.njk" %}
+    </div>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,29 @@
+{
+  "name": "EleventyOne",
+  "version": "1.0.0",
+  "description": "A project bootstrap for Eleventy sites. With pipelines for Sass, Js, and Lambdas",
+  "author": "Phil Hawksworth",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run build && yarn run serve",
+    "build": "gulp build && yarn run build:functions",
+    "build:functions": "netlify-lambda build src/lambda",
+    "serve": "gulp watch & gulp serve & netlify-lambda serve src/lambda"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/philhawksworth"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.3.0",
+    "gravatar": "^1.6.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-shell": "^0.6.5",
+    "netlify-lambda": "^0.2.0",
+    "run-sequence": "^2.2.1"
+  }
+}
+

@@ -1,0 +1,179 @@
+@import '_variables';
+@import '_mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+::-moz-selection {
+  background-color: $accent-color;
+  color: $page-color;
+}
+::selection {
+  background-color: $accent-color;
+  color: $page-color;
+}
+
+html {
+  background-color: $accent-color;
+}
+
+body {
+  text-align: center;
+  background-color: $page-color;
+  color: mix($text-color, $page-color, 70%);
+  // background: radial-gradient(ellipse at center,  10%,$page-color mix($page-color, $text-color, 90%)  100%);
+  // background-attachment: fixed;
+  font-family: sans-serif;
+  font-weight: 30;
+  font-size: 16px;
+  line-height: 1.8;
+
+  @include bp(mid) {
+    font-size: 18px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: left;
+
+  @include bp(mid) {
+    width: 600px;
+  }
+  @include bp(wide) {
+    width: 700px;
+  }
+}
+
+
+h1, h2, h3 {
+  color: $text-color;
+  font-weight: 600;
+  margin-top:2.5em;
+  margin-bottom:1em;
+  line-height: 1em;
+}
+h1 {
+  margin-top:0.4em;
+  font-size: 4em;
+  line-height: 0.9em;
+
+  @include bp(mid) {
+    font-size: 5em;
+  }
+  @include bp(wide) {
+    font-size: 6em;
+  }
+}
+
+
+p {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  small {
+    display: block;
+    margin-top: -0.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+li {
+  margin-bottom: 0.6em;
+}
+
+a:link,
+a:visited {
+  color: $accent-color;
+  text-decoration: none;
+  border-bottom: solid 1px mix($text-color, $page-color, 10%);
+}
+
+a:hover,
+a:focus {
+  color: $text-color;
+  border-bottom: solid 1px $accent-color;
+}
+
+
+
+.nav {
+  padding-top: 3em;
+
+  li {
+    display: inline;
+  }
+
+  a:link,
+  a:visited {
+    display: inline-block;
+    border-top: solid 1px mix($text-color,$page-color, 60%);
+    border-bottom-style: none;
+    padding-top: 0.8em;
+    padding-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0.7em;
+    width: 8em;
+    text-align: left;
+    color: mix($text-color,$page-color, 80%);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+      color: $text-color;
+      border-top: solid 1px $accent-color;
+      border-bottom-style: none;
+  }
+
+  small {
+    display: block;
+    font-size: 0.7em;
+    color: mix($text-color,$page-color, 60%);
+  }
+}
+
+
+pre {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 0.8em;
+  background-color: $page-color;
+  border: solid 1px mix($accent-color, $page-color, 30%);
+  overflow: auto;
+}
+
+
+
+footer {
+  margin-top: 6em;
+  padding-top: 4em;
+  padding-bottom: 6em;
+  border-top: solid 1px mix($text-color, $page-color, 10%);
+  font-size: 0.7em;
+  color: mix($text-color, $page-color, 40%);
+
+  a:link,
+  a:visited {
+    color: mix($text-color, $page-color, 70%);
+    border-bottom: solid 1px mix($accent-color, $page-color, 70%);
+  }
+
+  a:hover,
+  a:focus {
+    color: $accent-color;
+    border-bottom: solid 1px $text-color;
+  }
+
+}
