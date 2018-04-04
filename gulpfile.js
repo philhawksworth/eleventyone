@@ -14,14 +14,18 @@ var buildDest = "dist";
 
 
 
-// cleanup the build output
+/*
+ cleanup the build output
+*/
 gulp.task('clean-build', function () {
   return gulp.src(buildDest, {read: false})
     .pipe(clean());
 });
 
 
-// local webserver for development
+/*
+ local webserver for development
+*/
 gulp.task('serve', serve({
   root: [buildDest],
   port: 8008,
@@ -29,7 +33,9 @@ gulp.task('serve', serve({
 
 
 
-// Compile SCSS files to CSS
+/*
+ Compile SCSS files to CSS
+*/
 gulp.task("scss", function () {
   gulp.src(buildSrc + "/scss/main.scss")
     .pipe(sass({
