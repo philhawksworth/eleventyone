@@ -1,47 +1,6 @@
-
 var gulp  = require('gulp');
 var shell = require('gulp-shell');
 
-<<<<<<< HEAD
-=======
-/*
-  what goes where?
-*/
-var buildSrc = "src";
-var buildDest = "dist";
-
-
-
-/*
- cleanup the build output
-*/
-gulp.task('clean-build', function () {
-  return gulp.src(buildDest, {read: false})
-    .pipe(clean());
-});
-
-
-/*
- local webserver for development
-*/
-gulp.task('serve', serve({
-  root: [buildDest],
-  port: 8008,
-}));
-
-
-
-/*
- Compile SCSS files to CSS
-*/
-gulp.task("scss", function () {
-  gulp.src(buildSrc + "/scss/main.scss")
-    .pipe(sass({
-      outputStyle: "compressed"
-    }).on('error', sass.logError))
-    .pipe(gulp.dest(buildDest + "/css"))
-});
->>>>>>> de43a91989c77a7f578cde7529d03d35efa62e95
 
 /**
   Our gulp tasks live in their own files,
