@@ -23,14 +23,11 @@ html {
 body {
   text-align: center;
   background-color: $page-color;
-  color: mix($text-color, $page-color, 70%);
-  // background: radial-gradient(ellipse at center,  10%,$page-color mix($page-color, $text-color, 90%)  100%);
-  // background-attachment: fixed;
+  color: mix($text-color, $page-color, 80%);
   font-family: sans-serif;
   font-weight: 30;
   font-size: 16px;
   line-height: 1.8;
-
   @include bp(mid) {
     font-size: 18px;
   }
@@ -41,7 +38,6 @@ body {
   margin-right: auto;
   width: 90%;
   text-align: left;
-
   @include bp(mid) {
     width: 600px;
   }
@@ -76,17 +72,13 @@ p {
   margin-bottom: 1em;
 }
 
-ul {
-  list-style: none;
-  small {
-    display: block;
-    margin-top: -0.2em;
-    margin-bottom: 0.5em;
-  }
+.subtitle {
+  margin-top: -3em;
+  margin-bottom: 6em;
 }
 
-li {
-  margin-bottom: 0.6em;
+ul, ol {
+  padding-left: 1em;
 }
 
 a:link,
@@ -95,7 +87,6 @@ a:visited {
   text-decoration: none;
   border-bottom: solid 1px mix($text-color, $page-color, 10%);
 }
-
 a:hover,
 a:focus {
   color: $text-color;
@@ -125,7 +116,6 @@ a:focus {
     color: mix($text-color,$page-color, 80%);
     text-decoration: none;
   }
-
   a:hover,
   a:focus {
       color: $text-color;
@@ -141,18 +131,37 @@ a:focus {
 }
 
 
+code {
+  font-size: 0.8em;
+  background-color:  mix($accent-color, $page-color, 10%);
+  color: $text-color;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 pre {
   margin-top: 2em;
-  margin-bottom: 1em;
-  padding-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 2em;
   padding-right: 2em;
-  font-size: 0.8em;
-  background-color: $page-color;
+  line-height: 1.2;
+  background-color:  mix($accent-color, $page-color, 10%);
   border: solid 1px mix($accent-color, $page-color, 30%);
   overflow: auto;
+  code {
+    border-style: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
+
+
 
 
 
@@ -169,11 +178,9 @@ footer {
     color: mix($text-color, $page-color, 70%);
     border-bottom: solid 1px mix($accent-color, $page-color, 70%);
   }
-
   a:hover,
   a:focus {
     color: $accent-color;
     border-bottom: solid 1px $text-color;
   }
-
 }

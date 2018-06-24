@@ -17,6 +17,8 @@
             <a href="/about">about<small>all about this</small></a>
           </li>
         </ul>
+        <h1>{{ title }}</h1>
+        {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
       </header>
       {{ content | safe }}
       {% include "footer.njk" %}

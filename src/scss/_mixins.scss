@@ -1,5 +1,4 @@
 @mixin bp($point) {
-
   @if $point == narrow {
     @media #{$bp-narrow} { @content; }
   }
@@ -9,5 +8,4 @@
   @else if $point == wide {
     @media #{$bp-wide}  { @content; }
   }
-
 }

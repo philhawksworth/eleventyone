@@ -1,0 +1,12 @@
+---
+permalink: search.json
+---
+[
+{%- for post in collections.post -%}
+  {
+    "url": "{{ post.url }}",
+    "title": "{{ post.data.title }}",
+    "index": "{{ post.templateContent | squash }}"
+  }{% if not loop.last %},{% endif %}
+{%- endfor -%}
+]

@@ -1,9 +1,7 @@
 ---
-title: EleventyOne - A starting point
+title: Get Yours
 layout: layouts/base.njk
 ---
-
-# Get yours
 
 To get your own instance of this [11ty](https://11ty.io) starter project cloned and deploying to [Netlify](https://www.netlify.com) very quickly, just click the button below and follow the instructions.
 

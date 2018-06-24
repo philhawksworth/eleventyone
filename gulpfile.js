@@ -1,69 +1,46 @@
-var gulp        = require("gulp");
-var sass        = require("gulp-sass");
-var serve       = require('gulp-serve');
-var shell       = require('gulp-shell');
-var clean       = require('gulp-clean');
-var runSequence = require('run-sequence');
+
+var gulp  = require('gulp');
+var shell = require('gulp-shell');
 
 
-/*
-  what goes where?
-*/
-var buildSrc = "src";
-var buildDest = "dist";
-
-
-
-// cleanup the build output
-gulp.task('clean-build', function () {
-  return gulp.src(buildDest, {read: false})
-    .pipe(clean());
-});
-
-
-// local webserver for development
-gulp.task('serve', serve({
-  root: [buildDest],
-  port: 8008,
-}));
-
-
-
-// Compile SCSS files to CSS
-gulp.task("scss", function () {
-  gulp.src(buildSrc + "/scss/main.scss")
-    .pipe(sass({
-      outputStyle: "compressed"
-    }).on('error', sass.logError))
-    .pipe(gulp.dest(buildDest + "/css"))
-});
-
+/**
+  Our gulp tasks live in their own files,
+  for the sake of clarity.
+ */
+require('require-dir')('./gulp-tasks');
 
 
 /*
  Run our static site generator to build the pages
 */
-gulp.task('generate', shell.task('eleventy --config=eleventy.js'));
-
-
-
-
-/*
-  Watch src folder for changes
-*/
-gulp.task("watch", function () {
-  gulp.watch(buildSrc + "/**/*", ["build"])
-});
+gulp.task('generate', shell.task('eleventy'));
 
 
 
 /*
-  Let's build this sucker.
+  compile the assets to the correct destination
 */
-gulp.task('build', function(callback) {
-  runSequence(
-    ['clean-build'],
-    ['generate', 'scss'],
-    callback
-  );
-});
+gulp.task('assets', gulp.parallel(
+  'images',
+  'styles',
+  'scripts'
+));
+
+
+/*
+  Let's build this sucker, without getting data from online sources
+*/
+gulp.task('build:local', gulp.series(
+  'clean-build',
+  'generate',
+  'assets'
+));
+
+
+/*
+  Let's gwt the data we need and then build this sucker.
+*/
+gulp.task('build', gulp.series(
+  // 'get:data',
+  'build:local'
+));

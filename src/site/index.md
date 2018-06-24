@@ -1,20 +1,19 @@
 ---
-title: EleventyOne - A starting point
+title: EleventyOne
+subtitle: A project scaffold for getting building with Eleventy quickly.
 layout: layouts/base.njk
 ---
 
-# EleventyOne
-
-A project scaffold for getting building with [Eleventy](https//11ty.io) quickly.
 
 ## This site is a starting point
 
 From this point we should already have:
 
-- Eleventy with a skeleton site
+- [Eleventy](https://11ty.io) with a skeleton site
 - A date format filter for Nunjucks
 - Sass pipeline
 - JS pipeline
+- JS [search index](/search.json) generator
 - Serverless (FaaS) [development pipeline](http://127.0.0.1:9000/hello?foo=1&bar=2) with Netlify Functions for Lambda
 
 
