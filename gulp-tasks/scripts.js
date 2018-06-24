@@ -9,7 +9,7 @@ var pump    = require('pump');
 gulp.task('scripts', function(done) {
   pump([
       gulp.src(project.buildSrc + "/js/**/*.js"),
-      concat('hawksworx.js'),
+      concat('script-out.js'),
       uglify(),
       gulp.dest(project.buildDest + '/js')
     ],
