@@ -11,6 +11,7 @@
     "build:functions": "netlify-lambda build src/lambda",
     "serve": "gulp watch & gulp serve & netlify-lambda serve src/lambda"
   },
+<<<<<<< HEAD
   "repository": {
     "type": "git",
     "url": "https://github.com/philhawksworth/eleventyone"
@@ -19,6 +20,15 @@
     "@11ty/eleventy": "^0.4.0",
     "gravatar": "^1.6.0",
     "gulp": "^4.0.0",
+=======
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/philhawksworth/eleventyone"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.3.0",
+    "gulp": "^3.9.1",
+>>>>>>> de43a91989c77a7f578cde7529d03d35efa62e95
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
