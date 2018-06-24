@@ -41,5 +41,6 @@ gulp.task('build:local', gulp.series(
 */
 gulp.task('build', gulp.series(
   // 'get:data',
-  'build:local'
+  'generate',
+  'assets'
 ));
