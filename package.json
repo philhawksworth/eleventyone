@@ -17,7 +17,7 @@
     "url": "https://github.com/philhawksworth/eleventyone"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.4.0",
+    "@11ty/eleventy": "^0.5.2",
     "concurrent-transform": "^1.0.0",
     "gravatar": "^1.6.0",
     "gulp": "^4.0.0",
@@ -32,5 +32,13 @@
     "netlify-lambda": "^0.2.0",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   }
 }

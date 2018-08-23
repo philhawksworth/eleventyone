@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@11ty/eleventy@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-0.4.0.tgz#186df5e740f9cc76a4e31eb00943764767ca329a"
+"@11ty/eleventy@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-0.5.0.tgz#7d41d510138cb0965e7a0a21c388e6d16ccefd91"
   dependencies:
     browser-sync "^2.24.4"
     chalk "^2.4.1"
