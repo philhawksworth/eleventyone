@@ -17,7 +17,11 @@
     "url": "https://github.com/philhawksworth/eleventyone"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@11ty/eleventy": "^0.5.2",
+=======
+    "@11ty/eleventy": "^0.5.0",
+>>>>>>> ddabbc755015a79ae4bf5f25cca4195852cbd95d
     "concurrent-transform": "^1.0.0",
     "gravatar": "^1.6.0",
     "gulp": "^4.0.0",
