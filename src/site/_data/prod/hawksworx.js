@@ -7,9 +7,6 @@ module.exports = () => {
   return new Promise((resolve, reject) => {
     axios.get(url)
       .then(response => {
-
-        console.log('response :', response.data);
-
         seed(JSON.stringify(response.data), `${__dirname}/../dev/hawksworx.json`)
         resolve(response.data);
       })
