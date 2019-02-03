@@ -1,19 +1,13 @@
-var project = require('./_project.js');
-var gulp    = require('gulp');
-var uglify  = require('gulp-uglify');
-var concat  = require('gulp-concat');
-var pump    = require('pump');
+const gulp   = require('gulp');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 
-// Uglify our javascript files into one.
-// Use pump to expose errors more usefully.
-gulp.task('scripts', function(done) {
-  pump([
-      gulp.src(project.buildSrc + "/js/**/*.js"),
-      concat('script-out.js'),
-      uglify(),
-      gulp.dest(project.buildDest + '/js')
-    ],
-    done()
-  );
+/*
+  Uglify our javascript files into one.
+*/
+gulp.task('js', function() {
+  return gulp.src("./src/js/**/*.js")
+    .pipe(concat('scripts.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./src/site/_includes/js'));
 });
-

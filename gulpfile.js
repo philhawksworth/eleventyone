@@ -1,6 +1,4 @@
-var gulp  = require('gulp');
-var shell = require('gulp-shell');
-
+const gulp  = require('gulp');
 
 /**
   Our gulp tasks live in their own files,
@@ -9,38 +7,35 @@ var shell = require('gulp-shell');
 require('require-dir')('./gulp-tasks');
 
 
-/*
- Run our static site generator to build the pages
-*/
-gulp.task('generate', shell.task('eleventy'));
-
-
 
 /*
-  compile the assets to the correct destination
+  Watch folders for changess
 */
-gulp.task('assets', gulp.parallel(
-  'images',
-  'styles',
-  'scripts'
+gulp.task("watch", function() {
+  gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
+  gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
+});
+
+
+/*
+  Let's build this sucker.
+*/
+gulp.task('build', gulp.parallel(
+  'css',
+  'js'
+));
+
+/*
+  Build and watch things during dev
+*/
+gulp.task('dev', gulp.series(
+  'build',
+  'watch'
 ));
 
 
-/*
-  Let's build this sucker, without getting data from online sources
-*/
-gulp.task('build:local', gulp.series(
-  'clean-build',
-  'generate',
-  'assets'
-));
 
 
-/*
-  Let's gwt the data we need and then build this sucker.
-*/
-gulp.task('build', gulp.series(
-  // 'get:data',
-  'generate',
-  'assets'
-));
+
+
+
