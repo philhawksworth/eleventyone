@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn run dev",
-    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
+    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve & yarn run dev:functions",
     "build": "gulp build & ELEVENTY_ENV=dev eleventy",
     "seed": "gulp build & ELEVENTY_ENV=seed eleventy",
     "build:functions": "netlify-lambda build src/lambda",
@@ -30,6 +30,9 @@
     "netlify-lambda": "^1.3.1",
     "require-dir": "^1.0.0",
     "xml2js": "^0.4.19"
+  },
+  "resolutions": {
+    "terser": "3.14.*"
   },
   "proxy": {
     "/.netlify/functions": {
