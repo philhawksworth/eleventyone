@@ -2,11 +2,13 @@
 permalink: search.json
 ---
 [
-{%- for post in collections.post -%}
+{%- for page in collections.all -%}
+  {%- if page.data.layout %}
   {
-    "url": "{{ post.url }}",
-    "title": "{{ post.data.title }}",
-    "index": "{{ post.templateContent | squash }}"
+    "url": "{{ page.url }}",
+    "title": "{{ page.data.title }}",
+    "index": "{{ page.templateContent | squash }}"
   }{% if not loop.last %},{% endif %}
+  {%- endif -%}
 {%- endfor -%}
 ]

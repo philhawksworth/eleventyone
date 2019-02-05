@@ -1,4 +1,3 @@
-'use strict';
 
 
 export function handler(event, context, callback) {
@@ -15,4 +14,4 @@ export function handler(event, context, callback) {
     body: `Hello from the serverless function. Called with these parameters: ${JSON.stringify(params)}`
   });
 
-}
+};

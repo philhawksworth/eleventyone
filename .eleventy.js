@@ -1,19 +1,42 @@
+const { DateTime } = require("luxon");
+
+
 module.exports = function(config) {
 
-  // Add a date formatter filter to Nunjucks
-  config.addFilter("dateDisplay", require("./filters/dates.js") );
-  config.addFilter("timestamp", require("./filters/timestamp.js") );
-  config.addFilter("squash", require("./filters/squash.js") );
+  // A useful way to reference to the contect we are runing eleventy in
+  let env = process.env.ELEVENTY_ENV;
 
+  // Layout aliases can make templates more portable
+  config.addLayoutAlias('default', 'layouts/base.njk');
+
+  // Add some utiliuty filters
+  config.addFilter("squash", require("./src/filters/squash.js") );
+  config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
+    console.log('format :', format);
+    return DateTime.fromJSDate(dateObj, {
+      zone: "utc"
+    }).toFormat(format);
+  });
+
+  // minify the html output
+  config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
+
+
+  // pass some assets right through
+  config.addPassthroughCopy("./src/site/images");
+
+  // make the seed target act like prod
+  env = (env=="seed") ? "prod" : env;
   return {
     dir: {
       input: "src/site",
       output: "dist",
-      includes: "_includes"
+      data: `_data/${env}`
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",
-    markdownTemplateEngine : "njk"
+    markdownTemplateEngine : "njk",
+    passthroughFileCopy: true
   };
 
 };

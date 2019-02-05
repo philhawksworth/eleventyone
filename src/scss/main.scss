@@ -6,13 +6,12 @@
   padding: 0;
 }
 
-
 ::-moz-selection {
-  background-color: $accent-color;
+  background-color: $text-color;
   color: $page-color;
 }
 ::selection {
-  background-color: $accent-color;
+  background-color: $text-color;
   color: $page-color;
 }
 
@@ -23,15 +22,18 @@ html {
 body {
   text-align: center;
   background-color: $page-color;
-  color: mix($text-color, $page-color, 80%);
+  color: mix($text-color, $page-color, 60%);
   font-family: sans-serif;
-  font-weight: 30;
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
+  min-height: 100vh;
+  background-image: url('/images/bg-grid.png');
   @include bp(mid) {
     font-size: 18px;
   }
 }
+
 
 .container {
   margin-left: auto;
@@ -50,14 +52,15 @@ body {
 h1, h2, h3 {
   color: $text-color;
   font-weight: 600;
-  margin-top:2.5em;
-  margin-bottom:1em;
-  line-height: 1em;
+  margin-top: 2em;
+  margin-bottom:0.2em;
+  line-height: 1;
 }
 h1 {
+  font-size: 3em;
   margin-top:0.4em;
-  font-size: 4em;
-  line-height: 0.9em;
+  margin-bottom:0.2em;
+  line-height: 1;
 
   @include bp(mid) {
     font-size: 5em;
@@ -67,14 +70,15 @@ h1 {
   }
 }
 
-
 p {
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
 .subtitle {
-  margin-top: -3em;
-  margin-bottom: 6em;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 5em;
 }
 
 ul, ol {
@@ -83,16 +87,15 @@ ul, ol {
 
 a:link,
 a:visited {
-  color: $accent-color;
+  color: $text-color;
   text-decoration: none;
   border-bottom: solid 1px mix($text-color, $page-color, 10%);
 }
 a:hover,
 a:focus {
   color: $text-color;
-  border-bottom: solid 1px $accent-color;
+  border-bottom: solid 1px $text-color;
 }
-
 
 
 .nav {
@@ -133,12 +136,22 @@ a:focus {
 
 code {
   font-size: 0.8em;
-  background-color:  mix($accent-color, $page-color, 10%);
+  background-color:  mix($accent-color, $page-color, 20%);
   color: $text-color;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  white-space: nowrap;
+}
+
+.date {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+main {
+  margin-top: 4em;
 }
 
 pre {
@@ -160,9 +173,6 @@ pre {
     padding-right: 0;
   }
 }
-
-
-
 
 
 footer {

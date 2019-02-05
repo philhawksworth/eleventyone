@@ -1,15 +1,14 @@
-var project = require('./_project.js');
 var gulp    = require('gulp');
 var sass    = require("gulp-sass");
 
-
 /*
-  Compile SCSS files to CSS
+  generate the css with sass
 */
-gulp.task('styles', function() {
-  return gulp.src(project.buildSrc + '/scss/main.scss')
+gulp.task('css', function() {
+  return gulp.src('./src/scss/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(gulp.dest(project.buildDest+ '/css'));
+    })
+    .on('error', sass.logError))
+    .pipe(gulp.dest('./src/site/_includes/css'));
 });

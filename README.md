@@ -25,3 +25,22 @@ Good question. Here's what it will do...
 1. Netlify will clone the git repository of this project into your Github account. It will be asking for permission to add the repo for you.
 2. We'll create a new site for you in Netlify, and configure it to use your shiny new repo. Right away you'll be able to deploy changes simply by pushing changes to your repo.
 3. That's it really.
+
+
+## Common additions
+
+### Netlify Functions
+
+Add the build pipeline for Netlify Functions for a simpler way tp build Lambdas
+
+```
+ "scripts": {
+   ..
+    "start" : "yarn run dev",
+    "dev": "yarn run watch && eleventy && yarn run dev:functions",
+    "build": "gulp build && yarn run build:functions",
+    "build:functions": "netlify-lambda build src/lambda",
+    "dev:functions": "netlify-lambda build src/lambda",
+
+  },
+```
