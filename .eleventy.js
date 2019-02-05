@@ -1,3 +1,6 @@
+const { DateTime } = require("luxon");
+
+
 module.exports = function(config) {
 
   // A useful way to reference to the contect we are runing eleventy in
@@ -6,10 +9,14 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
-  // Add a date formatter filter to Nunjucks
-  config.addFilter("dateDisplay", require("./src/filters/dates.js") );
-  config.addFilter("timestamp", require("./src/filters/timestamp.js") );
+  // Add some utiliuty filters
   config.addFilter("squash", require("./src/filters/squash.js") );
+  config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
+    console.log('format :', format);
+    return DateTime.fromJSDate(dateObj, {
+      zone: "utc"
+    }).toFormat(format);
+  });
 
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
