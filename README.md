@@ -11,6 +11,9 @@ This project scaffold includes:
 - Serverless (FaaS) development pipeline with Netlify Functions for Lambda
 
 
+![Eleventy screenshot](./eleventyone-template.png)
+
+
 ## Instructions
 
 To get your own instance of this 11ty starter project cloned and deploying to Netlify very quickly, just click the button below and follow the instructions.
