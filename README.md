@@ -27,20 +27,29 @@ Good question. Here's what it will do...
 3. That's it really.
 
 
-## Common additions
+## Local development
 
-### Netlify Functions
+To build the site you need:
 
-Add the build pipeline for Netlify Functions for a simpler way tp build Lambdas
+- [Node](https://nodejs.org) - to run the build
+- [Yarn](https://yarnpkg.com) - to install and manage dependencies
 
+
+### Getting started
+
+```bash
+
+# clone this repository
+git clone git@github.com:philhawksworth/eleventyone.git
+
+# go to the working directory
+cd eleventyone
+
+# install dependencies
+yarn
+
+# start a local build server with hot reloading
+yarn start
 ```
- "scripts": {
-   ..
-    "start" : "yarn run dev",
-    "dev": "yarn run watch && eleventy && yarn run dev:functions",
-    "build": "gulp build && yarn run build:functions",
-    "build:functions": "netlify-lambda build src/lambda",
-    "dev:functions": "netlify-lambda build src/lambda",
 
-  },
-```
+
