@@ -11,8 +11,8 @@ From this point we should already have:
 
 - [Eleventy](https://11ty.io) with a skeleton site
 - A date format filter for Nunjucks
-- Sass pipeline
-- JS pipeline
+- A tiny inline Sass pipeline
+- A tiny inline JS pipeline. (<a href="#" class="btn-log">Test a console.log message</a>)
 - JS [search index](/search.json) generator
 - Serverless (FaaS) development pipeline with Netlify Functions for Lambda
 
