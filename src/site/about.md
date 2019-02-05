@@ -4,6 +4,13 @@ layout: layouts/base.njk
 subtitle: Clone and deploy your own EleventyOne starter template.
 ---
 
+## Hosting
+
+This site is deployed by, and hosted by [Netlify](https://www.netlify.com).
+
+Latest deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/056b4a67-70e6-4af4-9be5-dee151b8e906/deploy-status)](https://app.netlify.com/sites/eleventyone/deploys)
+
+
 ## One-click deploy
 
 To get your own instance of this [Eleventy](https://11ty.io) starter project cloned and deploying to [Netlify](https://www.netlify.com) very quickly, just click the button below and follow the instructions.
