@@ -1,6 +1,18 @@
+# Ignored files for Git
+
+# macOS related files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js related files
 node_modules
+
+# Tooling related files
+yarn-error.log
+.env
+
+# Site related files
 dist
 functions
 src/site/_includes/css
-.env
-yarn-error.log
