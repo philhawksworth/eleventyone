@@ -3,13 +3,13 @@ const { DateTime } = require("luxon");
 
 module.exports = function(config) {
 
-  // A useful way to reference to the contect we are runing eleventy in
+  // A useful way to reference to the context we are running eleventy in
   let env = process.env.ELEVENTY_ENV;
 
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
-  // Add some utiliuty filters
+  // Add some utility filters
   config.addFilter("squash", require("./src/filters/squash.js") );
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, {
