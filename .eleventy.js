@@ -3,7 +3,7 @@ const { DateTime } = require("luxon");
 
 module.exports = function(config) {
 
-  // A useful way to reference to the contect we are runing eleventy in
+  // A useful way to reference to the context we are running eleventy in
   let env = process.env.ELEVENTY_ENV;
 
   // Layout aliases can make templates more portable
