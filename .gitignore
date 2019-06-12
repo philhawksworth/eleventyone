@@ -1,5 +1,5 @@
-node_modules
-dist
-src/site/_includes/css
+/node_modules
+/dist
+/src/site/_includes/css
 .env
-yarn-error.log
+/yarn-error.log

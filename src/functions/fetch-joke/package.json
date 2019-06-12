@@ -2,10 +2,7 @@
   "name": "node-fetch",
   "version": "1.0.0",
   "description": "netlify functions:create - default template for node fetch function",
-  "main": "node-fetch.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "fetch-joke.js",
   "keywords": [
     "netlify",
     "serverless",
