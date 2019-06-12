@@ -1,7 +1,8 @@
 const axios  = require('axios');
 const seed   = require('../../../utils/save-seed.js');
 
-require('dotenv').config()
+require('dotenv').config();
+
 const { INSTAGRAM_AUTH } = process.env;
 var url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${INSTAGRAM_AUTH}`;
 
