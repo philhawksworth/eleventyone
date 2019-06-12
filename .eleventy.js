@@ -10,7 +10,7 @@ module.exports = function(config) {
   config.addLayoutAlias('default', 'layouts/base.njk');
 
   // Add some utility filters
-  config.addFilter("squash", require("./src/filters/squash.js") );
+  config.addFilter("squash", require("./src/utils/filters/squash.js") );
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc"

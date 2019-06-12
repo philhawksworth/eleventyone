@@ -21,19 +21,20 @@ html {
 body {
   text-align: center;
   background-color: $page-color;
-  color: mix($text-color, $page-color, 80%);
+  color: mix($text-color, $page-color, 90%);
   font-family: sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
-  background-image: url('/images/bg-grid.png');
+  background:  $page-color;
+  background: linear-gradient(320deg, $page-color 0%, $accent-color 100%);
+
 
   @media (min-width: $narrow) {
     font-size: 18px;
   };
 }
-
 
 .container {
   margin-left: auto;
@@ -91,7 +92,7 @@ a:visited {
   text-decoration: none;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: mix($text-color, $page-color, 20%)
+  border-bottom-color: mix($text-color, $accent-color, 20%)
 }
 a:hover,
 a:focus {
@@ -99,6 +100,12 @@ a:focus {
   border-bottom-color: $text-color;
 }
 
+.nakedLink a:link,
+.nakedLink a:visited,
+.nakedLink a:hover,
+.nakedLink a:focus {
+  border-bottom-style:none;
+}
 
 .nav {
   padding-top: 3em;
@@ -112,7 +119,7 @@ a:focus {
     display: inline-block;
     border-top-style: solid;
     border-top-width: 1px;
-    border-top-color: mix($text-color,$page-color, 60%);
+    border-top-color: mix($text-color, $accent-color, 40%);
     border-bottom-style: none;
     padding-top: 0.8em;
     padding-bottom: 2em;
@@ -120,7 +127,7 @@ a:focus {
     margin-right: 0.7em;
     width: 9em;
     text-align: left;
-    color: mix($text-color,$page-color, 80%);
+    color: mix($text-color, $accent-color, 80%);
     text-decoration: none;
   }
   a:hover,
@@ -133,15 +140,15 @@ a:focus {
   small {
     display: block;
     font-size: 0.7em;
-    color: mix($text-color,$page-color, 60%);
+    color: mix($text-color,$accent-color, 60%);
   }
 }
 
 
 code {
   font-size: 0.8em;
-  background-color: mix($accent-color, $page-color, 20%);
-  color: $text-color;
+  color: $accent-color;
+  background-color: $text-color;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 6px;
@@ -167,10 +174,12 @@ pre {
   padding-right: 2em;
   line-height: 1.2;
   background-color:  mix($accent-color, $page-color, 10%);
+  background-color: $text-color;
   border-style: solid;
   border-width: 1px;
   border-color: mix($accent-color, $page-color, 30%);
   overflow: auto;
+  border-radius: 6px;
   code {
     border-style: none;
     padding-top: 0;
@@ -185,18 +194,20 @@ footer {
   margin-top: 6em;
   padding-top: 4em;
   padding-bottom: 6em;
-  border-top: solid 1px mix($text-color, $page-color, 10%);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: mix($text-color, $accent-color, 10%);
   font-size: 0.7em;
-  color: mix($text-color, $page-color, 40%);
+  color: mix($text-color, $accent-color, 50%);
 
   a:link,
   a:visited {
-    color: mix($text-color, $page-color, 70%);
+    color: mix($text-color, $accent-color, 90%);
     border-bottom: solid 1px mix($accent-color, $page-color, 70%);
   }
   a:hover,
   a:focus {
-    color: $accent-color;
+    color: $text-color;
     border-bottom: solid 1px $text-color;
   }
 }
