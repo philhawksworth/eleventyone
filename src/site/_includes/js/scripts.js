@@ -1,1 +1,0 @@
-function btnHandler(e,n){var t=document.querySelector(e);t&&t.addEventListener("click",function(e){e.preventDefault(),n()},!1)}btnHandler(".btn-log",function(){console.log("Oh, hello there!")});

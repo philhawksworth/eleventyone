@@ -1,5 +1,8 @@
 [build]
   command = "yarn run build"
   publish = "dist"
-  NODE_ENV = "8.9.0"
   Functions = "functions"
+  NODE_ENV = "10.15.3"
+
+[dev]
+  command = "yarn run dev"

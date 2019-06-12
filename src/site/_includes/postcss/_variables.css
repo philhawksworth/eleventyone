@@ -1,0 +1,9 @@
+/* breakpoints for media queries */
+$narrow: 400px;
+$mid: 740px;
+$wide: 1200px;
+
+/* colours */
+$page-color: #385780;
+$text-color: #fff;
+$accent-color: #213b5c;

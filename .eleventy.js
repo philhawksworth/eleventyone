@@ -20,6 +20,18 @@ module.exports = function(config) {
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
+  // compress and combine js files
+  config.addFilter("jsmin", function(code) {
+    const UglifyJS = require("uglify-js");
+    let minified = UglifyJS.minify(code);
+      if( minified.error ) {
+          console.log("UglifyJS error: ", minified.error);
+          return code;
+      }
+      return minified.code;
+  });
+
+
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
 
@@ -31,7 +43,7 @@ module.exports = function(config) {
       output: "dist",
       data: `_data/${env}`
     },
-    templateFormats : ["njk", "md"],
+    templateFormats : ["njk", "md", "11ty.js"],
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true

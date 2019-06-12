@@ -1,5 +1,4 @@
-@import '_variables';
-@import '_mixins';
+@import '_variables.css';
 
 * {
   margin: 0;
@@ -22,16 +21,17 @@ html {
 body {
   text-align: center;
   background-color: $page-color;
-  color: mix($text-color, $page-color, 60%);
+  color: mix($text-color, $page-color, 80%);
   font-family: sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
   background-image: url('/images/bg-grid.png');
-  @include bp(mid) {
+
+  @media (min-width: $narrow) {
     font-size: 18px;
-  }
+  };
 }
 
 
@@ -40,12 +40,12 @@ body {
   margin-right: auto;
   width: 90%;
   text-align: left;
-  @include bp(mid) {
+  @media (min-width: $mid) {
     width: 600px;
-  }
-  @include bp(wide) {
+  };
+  @media (min-width: $wide) {
     width: 700px;
-  }
+  };
 }
 
 
@@ -62,12 +62,12 @@ h1 {
   margin-bottom:0.2em;
   line-height: 1;
 
-  @include bp(mid) {
+  @media (min-width: $mid) {
     font-size: 5em;
-  }
-  @include bp(wide) {
+  };
+  @media (min-width: $wide) {
     font-size: 6em;
-  }
+  };
 }
 
 p {
@@ -89,12 +89,14 @@ a:link,
 a:visited {
   color: $text-color;
   text-decoration: none;
-  border-bottom: solid 1px mix($text-color, $page-color, 10%);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: mix($text-color, $page-color, 20%)
 }
 a:hover,
 a:focus {
   color: $text-color;
-  border-bottom: solid 1px $text-color;
+  border-bottom-color: $text-color;
 }
 
 
@@ -108,13 +110,15 @@ a:focus {
   a:link,
   a:visited {
     display: inline-block;
-    border-top: solid 1px mix($text-color,$page-color, 60%);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: mix($text-color,$page-color, 60%);
     border-bottom-style: none;
     padding-top: 0.8em;
     padding-bottom: 2em;
     margin-left: 0;
     margin-right: 0.7em;
-    width: 8em;
+    width: 9em;
     text-align: left;
     color: mix($text-color,$page-color, 80%);
     text-decoration: none;
@@ -122,7 +126,7 @@ a:focus {
   a:hover,
   a:focus {
       color: $text-color;
-      border-top: solid 1px $accent-color;
+      border-top-color: $text-color;
       border-bottom-style: none;
   }
 
@@ -136,7 +140,7 @@ a:focus {
 
 code {
   font-size: 0.8em;
-  background-color:  mix($accent-color, $page-color, 20%);
+  background-color: mix($accent-color, $page-color, 20%);
   color: $text-color;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -163,7 +167,9 @@ pre {
   padding-right: 2em;
   line-height: 1.2;
   background-color:  mix($accent-color, $page-color, 10%);
-  border: solid 1px mix($accent-color, $page-color, 30%);
+  border-style: solid;
+  border-width: 1px;
+  border-color: mix($accent-color, $page-color, 30%);
   overflow: auto;
   code {
     border-style: none;
