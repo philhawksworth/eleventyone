@@ -12,7 +12,7 @@
      white-space: pre;
      word-spacing: normal;
      word-break: normal;
-     font-size: 0.95em;
+     font-size: 0.9em;
      line-height: 1.2em;
 
      -moz-tab-size: 4;
@@ -40,27 +40,17 @@
      padding: 1em;
      margin: 2em 0;
      overflow: auto;
-     border: 1px solid #dddddd;
-     background-color: white;
+     background-color: mix($text-color,$accent-color, 80%);
  }
 
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
- }
 
- /* Inline code */
- :not(pre) > code[class*="language-"] {
-     padding: .2em;
-     padding-top: 1px; padding-bottom: 1px;
-     background: #f8f8f8;
-     border: 1px solid #dddddd;
- }
 
  .token.comment,
  .token.prolog,
  .token.doctype,
  .token.cdata {
-     color: #999988; font-style: italic;
+     color: #7e94ac;
+     font-style: italic;
  }
 
  .token.namespace {
@@ -96,11 +86,7 @@
      color: #00a4db;
  }
 
- .token.function,
- .token.deleted,
- .language-autohotkey .token.tag {
-     color: #9a050f;
- }
+
 
  .token.tag,
  .token.selector,
@@ -108,12 +94,3 @@
      color: #00009f;
  }
 
- .token.important,
- .token.function,
- .token.bold {
-     font-weight: bold;
- }
-
- .token.italic {
-     font-style: italic;
- }

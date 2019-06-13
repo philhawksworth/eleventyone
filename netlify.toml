@@ -5,7 +5,7 @@
   NODE_ENV = "10.15.3"
 
 [dev]
-  command = "yarn run dev"
+  command = "npm run start"
 
 
 [[redirects]]

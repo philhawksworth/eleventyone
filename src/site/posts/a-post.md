@@ -9,7 +9,7 @@ The common front-matter data for all of the files in the posts section are abstr
 
 It looks like this:
 
-```
+```js
 {
   "layout" : "layouts/post.md",
   "tags" : "post",
