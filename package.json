@@ -5,7 +5,7 @@
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run dev",
+    "start": "npm run dev",
     "dev": "ELEVENTY_ENV=dev eleventy --serve",
     "build": "ELEVENTY_ENV=prod eleventy",
     "seed": "ELEVENTY_ENV=seed eleventy"
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "autoprefixer": "^9.6.0",
     "axios": "^0.19.0",
     "cssnano": "^4.1.10",

@@ -1,4 +1,5 @@
 @import '_variables.css';
+@import '_syntax.css';
 
 * {
   margin: 0;
@@ -28,8 +29,7 @@ body {
   line-height: 1.8;
   min-height: 100vh;
   background:  $page-color;
-  background: linear-gradient(320deg, $page-color 0%, $accent-color 100%);
-
+  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
 
   @media (min-width: $narrow) {
     font-size: 18px;
@@ -147,7 +147,6 @@ a:focus {
 
 code {
   font-size: 0.8em;
-  color: $accent-color;
   background-color: $text-color;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -166,18 +165,6 @@ main {
 }
 
 pre {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  line-height: 1.2;
-  background-color:  mix($accent-color, $page-color, 10%);
-  background-color: $text-color;
-  border-style: solid;
-  border-width: 1px;
-  border-color: mix($accent-color, $page-color, 30%);
   overflow: auto;
   border-radius: 6px;
   code {

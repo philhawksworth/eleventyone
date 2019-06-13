@@ -1,4 +1,5 @@
-const { DateTime } = require("luxon");
+
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 
 module.exports = function(config) {
@@ -11,11 +12,11 @@ module.exports = function(config) {
 
   // Add some utility filters
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
-  config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: "utc"
-    }).toFormat(format);
-  });
+  config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
+
+
+  // add support for syntax highlighting
+  config.addPlugin(syntaxHighlight);
 
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));

@@ -1,3 +1,3 @@
 btnHandler('.btn-log', function(){
-  console.log('Oh, hello there!');
+  console.log('👋 Oh, hello there!');
 });
