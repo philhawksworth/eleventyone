@@ -64,14 +64,14 @@ netlify dev
 
 A serverless functions pipeline is included via Netlify Dev. By running `netlify dev` you'll be able to execute any of your serverless functions directly like this:
 
-- [/.netlify/functions/hello](/.netlify/functions/hello)
-- [/.netlify/functions/fetch-joke](/.netlify/functions/fetch-joke)
+- /.netlify/functions/hello
+- /.netlify/functions/fetch-joke
 
 
 ### Redirects and proxies
 
 Netlify's Redirects API can provide friendlier URLs as proxies to these URLs.
 
-- [/api/hello](/api/hello)
-- [/api/fetch-joke](/api/fetch-joke)
+- /api/hello
+- /api/fetch-joke
 
