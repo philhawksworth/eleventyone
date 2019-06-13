@@ -153,6 +153,7 @@ code {
   padding-bottom: 4px;
   padding-left: 6px;
   padding-right: 6px;
+  border-radius: 4px;
   white-space: nowrap;
 }
 

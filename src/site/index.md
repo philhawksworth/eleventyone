@@ -80,7 +80,7 @@ A serverless functions pipeline is included via Netlify Dev. By running `netlify
 
 ### Redirects and proxies
 
-Netlify's Redirects API can provide friendlier URLs to proxy to these URLs.
+Netlify's Redirects API can provide friendlier URLs as proxies to these URLs.
 
 - [/api/hello](/api/hello)
 - [/api/fetch-joke](/api/fetch-joke)
