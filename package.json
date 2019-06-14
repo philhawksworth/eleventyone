@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",
-    "dev": "ELEVENTY_ENV=dev eleventy --serve",
-    "build": "ELEVENTY_ENV=prod eleventy",
-    "seed": "ELEVENTY_ENV=seed eleventy"
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy",
+    "seed": "cross-env ELEVENTY_ENV=seed eleventy"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,8 @@
     "precss": "^4.0.0",
     "uglify-js": "^3.6.0",
     "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "cross-env": "5.2.0"
   }
 }
