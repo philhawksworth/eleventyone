@@ -1,5 +1,5 @@
 {
-  "layout" : "src/site/layouts/post.md",
+  "layout" : "layouts/post.md",
   "tags" : "post",
   "templateEngineOverride": "njk,md"
 }

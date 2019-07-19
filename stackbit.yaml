@@ -26,7 +26,7 @@ models:
     label: Base
     description: Generic  page  layout
     folder: src/site/pages
-    template: src/site/layouts/page.njk
+    template: layouts/page.njk
     fields:
       - type: string
         name: title
@@ -42,7 +42,7 @@ models:
     label: Post
     description: Post Layout
     folder: src/site/posts
-    template: src/site/layouts/post.njk
+    template: layouts/post.njk
     fields:
       - type: string
         name: title

@@ -1,7 +1,7 @@
 ---
 title: Get Yours
 subtitle: Clone and deploy your own EleventyOne starter template.
-layout: src/site/layouts/page.njk
+layout: layouts/page.njk
 ---
 
 ## Hosting
