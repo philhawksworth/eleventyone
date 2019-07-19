@@ -1,16 +1,32 @@
 stackbitVersion: ~0.2.34
+ssgName: eleventy
+version: 0.8.2
 uploadDir: images
-metadata:
-  title: EleventyOne
-  description: "Phil's first port of call when starting another project using Eleventy."
-  author: Phil Hawksworth
-  authorURL: https://github.com/philhawksworth/eleventyone
+buildCommand: "npm install && npm run build"
+publishDir: _site
+dataDir: _sitedata
+pagesDir: ""
+staticDir: "static"
+pageTemplateKey: layout
 models:
-  base:
+  metadata:
+    type: data
+    label: Site Metadata
+    description: Global Site Metadata
+    file: metadata.yaml
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Repo URL
+  page:
     type: page
     label: Base
-    template: base
-    exclude: posts/**
+    description: Generic  page  layout
+    folder: pages
+    template: layouts/page.njk
     fields:
       - type: string
         name: title
@@ -24,8 +40,9 @@ models:
   post:
     type: page
     label: Post
+    description: Post Layout
     folder: posts
-    template: post
+    template: layouts/post.njk
     fields:
       - type: string
         name: title

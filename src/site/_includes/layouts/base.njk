@@ -10,7 +10,7 @@
 
     <div class="container">
       {% include "header.njk" %}
-      {{ content | safe }}
+      {% block  content %}{% endblock %}
       {% include "footer.njk" %}
     </div>
 
