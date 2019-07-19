@@ -3,7 +3,7 @@ ssgName: eleventy
 version: 0.8.2
 uploadDir: images
 buildCommand: "npm install && npm run build"
-publishDir: _site
+publishDir: dist
 dataDir: _sitedata
 pagesDir: ""
 staticDir: "static"
