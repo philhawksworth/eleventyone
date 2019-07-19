@@ -5,7 +5,7 @@ uploadDir: images
 buildCommand: "npm install && npm run build"
 publishDir: dist
 dataDir: _sitedata
-pagesDir: ""
+pagesDir: "pages"
 staticDir: "static"
 pageTemplateKey: layout
 models:
