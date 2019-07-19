@@ -1,6 +1,15 @@
 ---
+tags:
+  - page
 title: EleventyOne
 subtitle: A project scaffold for getting building with Eleventy quickly.<br /> Made by <a href="https://twitter.com/philhawksworth">Phil</a> for <a href="https://twitter.com/philhawksworth">Phil</a>, but perhaps you might also find it useful.
+date: 2018-02-21
+menu:
+  enabled: true
+  title: home
+  subtitle:
+    enabled: true
+    text: where the heart is
 layout: layouts/page.njk
 ---
 

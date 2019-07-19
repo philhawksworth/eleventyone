@@ -4,7 +4,7 @@ version: 0.8.2
 uploadDir: images
 buildCommand: "npm install && npm run build"
 publishDir: dist
-dataDir: _sitedata
+dataDir: "_data/sitedata"
 pagesDir: ""
 staticDir: "static"
 pageTemplateKey: layout
@@ -28,6 +28,9 @@ models:
     folder: src/site/pages
     template: layouts/page.njk
     fields:
+      - type: list
+        name: tags
+        label: Tags
       - type: string
         name: title
         label: Page Title
@@ -37,6 +40,38 @@ models:
         name: subtitle
         label: Page Subtitle
         description: The text displayed below the page title.
+      - type: date
+        name: date
+        label: Post Date
+        required: true
+        description: The date the post was created
+      - type: object
+        name: menu
+        label: Menu
+        description: Nav Menu entry information
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            default: false
+            description: displays the page in the nav menu
+          - type: string
+            name: title
+            label: Title
+            description: The title displayed in the nav entry
+          - type: object
+            name: subtitle
+            label: Subtitle
+            fields:
+              - type: boolean
+                name: enabled
+                label: Enabled
+                description: Displays the nave entry subtitle
+                default: false
+              - type: string
+                name: text
+                label: Text
+                description: The text displayed in the subtitle
   home:
     type: page
     label: Home
@@ -44,6 +79,9 @@ models:
     file: src/site/index.md
     template: layouts/page.njk
     fields:
+      - type: list
+        name: tags
+        label: Tags
       - type: string
         name: title
         label: Page Title
@@ -53,6 +91,38 @@ models:
         name: subtitle
         label: Page Subtitle
         description: The text displayed below the page title.
+      - type: date
+        name: date
+        label: Post Date
+        required: true
+        description: The date the post was created
+      - type: object
+        name: menu
+        label: Menu
+        description: Nav Menu entry information
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            default: false
+            description: displays the page in the nav menu
+          - type: string
+            name: title
+            label: Title
+            description: The title displayed in the nav entry
+          - type: object
+            name: subtitle
+            label: Subtitle
+            fields:
+              - type: boolean
+                name: enabled
+                label: Enabled
+                description: Displays the nave entry subtitle
+                default: false
+              - type: string
+                name: text
+                label: Text
+                description: The text displayed in the subtitle
   post:
     type: page
     label: Post
@@ -60,6 +130,9 @@ models:
     folder: src/site/posts
     template: layouts/post.njk
     fields:
+      - type: list
+        name: tags
+        label: Tags
       - type: string
         name: title
         label: Page Title
@@ -70,3 +143,30 @@ models:
         label: Post Date
         required: true
         description: The date the post was created
+      - type: object
+        name: menu
+        label: Menu
+        description: Nav Menu entry information
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            default: false
+            description: displays the page in the nav menu
+          - type: string
+            name: title
+            label: Title
+            description: The title displayed in the nav entry
+          - type: object
+            name: subtitle
+            label: Subtitle
+            fields:
+              - type: boolean
+                name: enabled
+                label: Enabled
+                description: Displays the nave entry subtitle
+                default: false
+              - type: string
+                name: text
+                label: Text
+                description: The text displayed in the subtitle

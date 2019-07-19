@@ -1,6 +1,15 @@
 ---
+tags:
+  - page
 title: Get Yours
 subtitle: Clone and deploy your own EleventyOne starter template.
+date: 2018-03-21
+menu:
+  enabled: true
+  title: about
+  subtitle:
+    enabled: true
+    text: all about this
 layout: layouts/page.njk
 ---
 

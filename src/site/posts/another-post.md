@@ -1,4 +1,7 @@
 ---
+tags:
+  - page
+  - post
 layout: layouts/post.njk
 title: Another post page
 date: 2018-03-28

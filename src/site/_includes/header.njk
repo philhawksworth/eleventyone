@@ -1,11 +1,12 @@
 <header>
   <ul class="nav">
-    <li>
-      <a href="/">home<small>where the heart is</small></a>
-    </li>
-    <li>
-      <a href="/about">about<small>all about this</small></a>
-    </li>
+    {% for item in collections.page | sort(attribute="date") %}
+      {% if item.data.menu.enabled %}
+        <li>
+          <a href="{{ item.url | url }}">{{ item.data.menu.title }}{% if item.data.menu.subtitle.enabled %}<small>{{ item.data.menu.subtitle.text }}</small>{% endif %}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
   </ul>
   <h1>{{ title }}</h1>
   {%- if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
