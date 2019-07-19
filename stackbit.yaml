@@ -25,8 +25,8 @@ models:
     type: page
     label: Base
     description: Generic  page  layout
-    folder: pages
-    template: layouts/page.njk
+    folder: src/site/pages
+    template: src/site/layouts/page.njk
     fields:
       - type: string
         name: title
@@ -41,8 +41,8 @@ models:
     type: page
     label: Post
     description: Post Layout
-    folder: posts
-    template: layouts/post.njk
+    folder: src/site/posts
+    template: src/site/layouts/post.njk
     fields:
       - type: string
         name: title

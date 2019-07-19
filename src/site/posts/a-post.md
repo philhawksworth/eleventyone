@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: src/site/layouts/post.njk
 title: A post page
 date: 2018-03-21
 ---
