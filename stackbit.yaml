@@ -129,7 +129,7 @@ models:
     label: Post
     description: Post Layout
     folder: src/site/posts
-    exclude: src/site/posts.json
+    exclude: src/site/posts/posts.json
     template: layouts/post.njk
     fields:
       - type: list
