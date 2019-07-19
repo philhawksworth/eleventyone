@@ -76,6 +76,7 @@ models:
     type: page
     label: Home
     description: Generic  page  layout
+    singleInstance: true
     file: src/site/index.md
     template: layouts/page.njk
     fields:
