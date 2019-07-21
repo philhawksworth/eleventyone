@@ -5,6 +5,7 @@ tags:
 layout: layouts/post.njk
 title: Another post page
 date: 2018-03-28
+templateEngineOverride: "njk,md"
 ---
 
 Another simple page. TEST

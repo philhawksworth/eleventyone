@@ -4,7 +4,7 @@ version: 0.8.2
 uploadDir: images
 buildCommand: "npm install && npm run build"
 publishDir: dist
-dataDir: "_data/sitedata"
+dataDir: "_data/prod/sitedata"
 pagesDir: ""
 staticDir: "static"
 pageTemplateKey: layout
@@ -13,14 +13,27 @@ models:
     type: data
     label: Site Metadata
     description: Global Site Metadata
-    file: metadata.yaml
+    file: metadata.json
     fields:
       - type: string
         name: title
         label: Title
+      - type: date
+        name: siteDate
+        label: Site Date
+        description: The date the site was created
       - type: string
         name: url
         label: Repo URL
+  footer:
+    type: data
+    label: Footer Configuration
+    description: The data displayed inthe site footer
+    file: footer.json
+    fields:
+      - type: string
+        name: text
+        label: Footer Text
   page:
     type: page
     label: Page
@@ -129,7 +142,6 @@ models:
     label: Post
     description: Post Layout
     folder: src/site/posts
-    exclude: src/site/posts/posts.json
     template: layouts/post.njk
     fields:
       - type: list
@@ -145,6 +157,11 @@ models:
         label: Post Date
         required: true
         description: The date the post was created
+      - type: string
+        name: templateEngineOverride
+        label: Template Engine Override
+        hidden: true
+        const: "njk,md"
       - type: object
         name: menu
         label: Menu
