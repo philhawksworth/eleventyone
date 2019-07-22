@@ -1,6 +1,5 @@
 stackbitVersion: ~0.2.34
-ssgName: eleventy
-version: 0.8.2
+ssgName: custom
 uploadDir: images
 buildCommand: "npm install && npm run build"
 publishDir: dist
