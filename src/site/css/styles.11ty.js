@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const { promisify } = require('util');
 const postcss = require('postcss');
+
+const asyncReadFile = promisify(fs.readFile);
 
 // the file name as an entry point for postcss compilation
 // also used to define the output filename in our output /css folder.
@@ -12,7 +15,7 @@ module.exports = class {
     return {
       permalink: `css/${fileName}`,
       rawFilepath,
-      rawCss: await fs.readFileSync(rawFilepath)
+      rawCss: await asyncReadFile(rawFilepath)
     };
   };
 
