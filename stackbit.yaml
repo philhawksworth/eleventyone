@@ -32,9 +32,14 @@ models:
   footer:
     type: data
     label: Footer Configuration
-    description: The data displayed inthe site footer
+    description: The data displayed in the site footer
     file: footer.json
     fields:
+      - type: boolean
+        name: enabled
+        label: Enabled
+        description: Displays the site footer
+        default: false
       - type: string
         name: text
         label: Footer Text

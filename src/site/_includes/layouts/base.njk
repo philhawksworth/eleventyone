@@ -11,7 +11,9 @@
     <div class="container">
       {% include "header.njk" %}
       {% block  content %}{% endblock %}
-      {% include "footer.njk" %}
+      {% if sitedata.footer.enabled %}
+        {% include "footer.njk" %}
+      {% endif %}
     </div>
 
     {% set js %}
