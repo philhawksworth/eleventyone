@@ -7,6 +7,11 @@ dataDir: "_data/prod/sitedata"
 pagesDir: ""
 staticDir: "static"
 pageTemplateKey: layout
+metadata:
+  title: EleventyOne
+  description: The EleventyOne theme for eleventy
+  author: Phil Hawksworth
+  authorURL: 'https://github.com/philhawksworth/eleventyone'
 models:
   metadata:
     type: data
