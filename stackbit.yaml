@@ -3,7 +3,7 @@ ssgName: custom
 uploadDir: images
 buildCommand: "npm install && npm run build"
 publishDir: dist
-dataDir: "_data/prod/sitedata"
+dataDir: "src/site/_data/prod/sitedata"
 pagesDir: ""
 staticDir: "static"
 pageTemplateKey: layout
