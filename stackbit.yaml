@@ -17,7 +17,7 @@ models:
     type: data
     label: Site Metadata
     description: Global Site Metadata
-    file: src/site/_data/prod/sitedata/metadata.json
+    file: metadata.json
     fields:
       - type: string
         name: title
@@ -33,7 +33,7 @@ models:
     type: data
     label: Footer Configuration
     description: The data displayed in the site footer
-    file: src/site/_data/prod/sitedata/footer.json
+    file: footer.json
     fields:
       - type: boolean
         name: enabled
