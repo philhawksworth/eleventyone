@@ -1,0 +1,78 @@
+stackbitVersion: ~0.2.34
+ssgName: custom
+buildCommand: "npm install && npm run build"
+publishDir: dist
+staticDir: "src/site"
+uploadDir: "images"
+pagesDir: "src/site"
+pageLayoutKey: layout
+models:
+  home:
+    type: page
+    label: Homepage
+    singleInstance: true
+    file: index.md
+    layout: layouts/base.njk
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: text
+        name: subtitle
+        label: Subtitle
+      - type: object
+        name: menus
+        label: Show in menu
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: subtitle
+            label: Subtitle
+          - type: number
+            name: weight
+            label: Weight
+  page:
+    type: page
+    label: Page
+    match: "**/*.md"
+    exclude: "{index.md,_data/**,posts/**}"
+    layout: layouts/base.njk
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: text
+        name: subtitle
+        label: Subtitle
+      - type: object
+        name: menus
+        label: Show in menu
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: subtitle
+            label: Subtitle
+          - type: number
+            name: weight
+            label: Weight
+  post:
+    type: page
+    label: Post
+    folder: posts
+    match: "**/*.md"
+    layout: layouts/post.njk
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: date
+        name: date
+        label: Date
+        required: true
