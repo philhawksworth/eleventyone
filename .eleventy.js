@@ -1,4 +1,5 @@
 
+const fs = require("fs");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 
@@ -35,6 +36,10 @@ module.exports = function(config) {
 
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
+
+  if (fs.existsSync("./src/site/admin")) {
+    config.addPassthroughCopy("./src/site/admin");
+  }
 
   config.addCollection("menus", function(collection) {
     return collection.getAll().filter(function(item) {
