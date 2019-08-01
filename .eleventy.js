@@ -36,6 +36,14 @@ module.exports = function(config) {
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
 
+  config.addCollection("menus", function(collection) {
+    return collection.getAll().filter(function(item) {
+      return item.data.menus && item.data.menus.title
+    }).sort(function(a, b) {
+      return a.data.menus.weight - b.data.menus.weight
+    });
+  });
+
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
   return {

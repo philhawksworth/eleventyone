@@ -1,12 +1,13 @@
 <header>
+  {%- if collections.menus.length %}
   <ul class="nav">
-    <li>
-      <a href="/">home<small>where the heart is</small></a>
-    </li>
-    <li>
-      <a href="/about">about<small>all about this</small></a>
-    </li>
+    {% for item in collections.menus %}
+      <li>
+        <a href="{{ item.url | url }}">{{ item.data.menus.title }}<small>{{ item.data.menus.subtitle or '&nbsp;' | safe }}</small></a>
+      </li>
+    {% endfor %}
   </ul>
+  {%- endif %}
   <h1>{{ title }}</h1>
   {%- if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
 </header>
