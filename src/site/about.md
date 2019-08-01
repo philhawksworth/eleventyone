@@ -42,6 +42,6 @@ You can also use Stackbit to instantly deploy a CMS-powered website from this 11
 
 <div class="nakedLink">
 
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/stackbithq/eleventyone)
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/philhawksworth/eleventyone)
 
 </div>
