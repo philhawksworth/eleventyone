@@ -11,7 +11,7 @@ It looks like this:
 
 ```js
 {
-  "layout" : "layouts/post.md",
+  "layout" : "layouts/post.njk",
   "tags" : "post",
   "templateEngineOverride": "njk,md"
 }
