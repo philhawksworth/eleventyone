@@ -35,3 +35,13 @@ Good question. Here's what it will do...
 1. Netlify will clone the [git repository]({{pkg.repository.url}}) of this project into your GitHub account. You will be asked for the required permissions to add the repo for you.
 2. They'll create a new site for you in Netlify, and configure it to use your shiny new repo. Right away you'll be able to deploy changes simply by pushing changes to your repo.
 3. That's it really.
+
+## Alternatively try Stackbit
+
+You can also use Stackbit to instantly deploy a CMS-powered website from this 11ty starter project. Any CMS supported by Stackbit can be used.
+
+<div class="nakedLink">
+
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/stackbithq/eleventyone)
+
+</div>
