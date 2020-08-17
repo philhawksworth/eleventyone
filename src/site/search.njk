@@ -8,7 +8,8 @@ permalink: search.json
     "url": "{{ page.url }}",
     "title": "{{ page.data.title }}",
     "index": "{{ page.templateContent | squash }}"
-  }{% if not loop.last %},{% endif %}
+  }
+  {% if not loop.last %},{% endif %}
   {%- endif -%}
 {%- endfor -%}
 ]
