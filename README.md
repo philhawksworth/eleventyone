@@ -37,6 +37,7 @@ Good question. Here's what it will do...
 ## Prerequisites
 
 - [Node and NPM](https://nodejs.org/)
+- [Netlify CLI](https://github.com/netlify/cli)
 
 ## Running locally
 
@@ -48,7 +49,7 @@ npm install
 npm run seed
 
 # It will then be available locally for building with
-npm run start
+npom start
 ```
 
 ## Add some Netlify helpers
