@@ -24,7 +24,7 @@
     "html-minifier": "^4.0.0",
     "luxon": "^1.16.0",
     "node-fetch": "^2.6.1",
-    "postcss": "^7.0.17",
+    "postcss": "^7.0.36",
     "postcss-color-mix": "^1.1.0",
     "postcss-comment": "^2.0.0",
     "postcss-import": "^12.0.1",
