@@ -49,7 +49,7 @@ npm install
 npm run seed
 
 # It will then be available locally for building with
-npom start
+npm start
 ```
 
 ## Add some Netlify helpers
