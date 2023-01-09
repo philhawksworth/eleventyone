@@ -22,7 +22,7 @@
     "cssnano": "^4.1.10",
     "dotenv": "^8.0.0",
     "html-minifier": "^4.0.0",
-    "luxon": "^1.16.0",
+    "luxon": "^2.5.2",
     "node-fetch": "^2.6.1",
     "postcss": "^7.0.17",
     "postcss-color-mix": "^1.1.0",
